@@ -31,6 +31,6 @@ execute:
   freeze: auto
 format:
   html:
-    theme: [pandoc, theme.scss]
+    theme: [pandoc, brand, theme.scss]
     toc: true
     toc-title: Table of Contents

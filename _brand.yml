@@ -1,0 +1,50 @@
+meta:
+  name:
+    full: GRASS GIS
+    short: GRASS
+  link:
+    home: https://osgeo.org/grass/
+    docs: https://grass.osgeo.org/learn/manuals/
+    github: https://github.com/OSGeo/
+    # bluesky: https://bsky.app/profile/acmecorp.bsky.social
+    # twitter: https://twitter.com/acmecorp
+    # linkedin: https://www.linkedin.com/company/acmecorp
+    # youtube: https://www.youtube.com/user/acmecorp
+  description: |
+    Bringing advanced geospatial technologies to the world
+  founded: 1984
+
+typography:
+  headings:
+    family: Roboto Slab
+    weight: 700
+    color: primary
+  link:
+    color: primary
+  fonts:
+    - family: Open Sans
+      source: google
+    - family: Roboto Slab
+      source: google
+    - family: Fira Code
+      source: google
+  base: Open Sans
+  
+  monospace: Fira Code
+
+color:
+  palette:
+    white: "#ffffff"
+    black: "#0a0a0a"
+    dark-grey: "#A0A0A0"
+    light-grey: "#CCCCCC"
+    light-green: "#EFF4E8"
+    dark-green: "#B8C6A5"
+    soft-green: "#9ED29C"
+  background: "#ffffff"
+  foreground: dark-grey
+  primary: "#088B36"
+  secondary: soft-green
+
+logo: 
+  medium: "images/logos/grass-favicon-white-32x32.png"
