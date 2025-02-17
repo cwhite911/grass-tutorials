@@ -19,6 +19,9 @@ jobs:
             with:
               version: '1.5.57' # Specify the desired version
 
+          - name: Render Quarto Project
+            uses: quarto-dev/quarto-actions/render@v2`
+
           - name: Upload static files as artifact
             uses: actions/upload-pages-artifact@v3
             with:
