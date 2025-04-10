@@ -2,12 +2,9 @@ project:
   type: website
   output-dir: docs
 website:
-  favicon: images/logos/grass-favicon-16x16.png
+  favicon: images/favicon.ico
   navbar:
-    title: "Learn GRASS"
-    background: primary
     search: true
-    logo: "images/logos/grass-favicon-white-32x32.png"
     tools:
       - icon: github
         menu:
@@ -43,7 +40,7 @@ execute:
   freeze: auto
 format:
   html:
-    theme: [pandoc, brand, theme.scss]
+    theme: [brand, pandoc, theme.scss]
     toc: true
     toc-title: Table of Contents
     link-external-newwindow: true
