@@ -32,19 +32,36 @@ typography:
   
   monospace: Fira Code
 
+# https://posit-dev.github.io/brand-yml/brand/color.html
 color:
   palette:
-    white: "#ffffff"
-    black: "#0a0a0a"
-    dark-grey: "#A0A0A0"
-    light-grey: "#CCCCCC"
-    light-green: "#EFF4E8"
-    dark-green: "#B8C6A5"
-    soft-green: "#9ED29C"
-  background: "#ffffff"
-  foreground: dark-grey
-  primary: "#088B36"
-  secondary: soft-green
+    green: "#4cb05b"
+    alt_green: "#6ed079"
+    light_green: "#87e991"
+    dark_green: "#088b36"
+    blue: "#00393f"
+    alt_blue: "#27575c"
+    light_blue: " #4a787d"
+    dark_blue: "#002024"
+    grey: "#91908f"
+    alt_grey: "#d8d8d8"
+    light_grey: "#f0f0f1"
+    dark_grey: "#757473"
+    black: "#021905"
+    white: "#f7f7f7"
+    support: "#f3398a"
+  foreground: black
+  background: white
+  primary: green
+  secondary: blue
+  tertiary: alt_blue
+  success: dark_green
+  info: light_blue
+  warning: light_green
+  danger: "#dc3545" # bootsrap5 danger
+  light: white
+  dark: black
+
 
 logo: 
   medium: "images/logos/grass-favicon-white-32x32.png"

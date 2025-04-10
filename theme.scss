@@ -31,7 +31,7 @@
     width: 100%;
     height: 100%;
     border-radius: 60%;
-    background: linear-gradient(to bottom, $brand-white, $brand-soft-green);
+    background: linear-gradient(to bottom, $brand-white, $brand-dark-green);
     opacity: 1;
     z-index: -1;
   }
@@ -50,7 +50,7 @@
     }
     .columns {
         .column {
-            background-color: rgba(251, 252, 250, 0.5) !important; 
+            background-color: $brand-grey !important; 
         }
         
     }
