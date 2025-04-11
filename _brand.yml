@@ -11,19 +11,19 @@ meta:
 typography:
   fonts:
     - family: Open Sans Regular
-      source: google
+      source: bunny
     - family: Open Sans Bold
-      source: google
+      source: bunny
     - family: Fira Sans Medium
-      source: google
+      source: bunny
     - family: Fira Code
-      source: google
+      source: bunny
   base: Open Sans Regular
   headings:
     family: Open Sans Bold
-    color: primary
+    color: alt_blue
   link:
-    color: primary
+    color: secondary
   monospace: Fira Code
  
 
@@ -51,11 +51,12 @@ color:
   secondary: blue
   tertiary: alt_blue
   success: dark_green
-  info: light_blue
-  warning: light_green
+  info: light_green
+  warning: light_blue
   danger: "#dc3545" # bootsrap5 danger
   light: white
   dark: black
+  link: dark_blue
 
 # https://posit-dev.github.io/brand-yml/brand/logo.html
 # https://sc.edu/about/offices_and_divisions/digital-accessibility/toolbox/best_practices/alternative_text/logo-alt-text/index.php
@@ -106,4 +107,16 @@ logo:
   large:
     light: logo-large-no-text-light
     dark: logo-large-no-text-dark
+
+defaults:
+  bootstrap:
+    # List of theme variables to override
+    # https://quarto.org/docs/output-formats/html-themes.html
+    defaults:
+      navbar-fg: white
+      navbar-hl: "$brand-alt-blue"
+      sidebar-fg: "$blue"
+      sidebar-hl: "$brand-alt-blue"
+      footer-bg: "$brand-green"
+      footer-fg: "$brand-white"
 

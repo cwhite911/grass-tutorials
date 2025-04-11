@@ -1,8 +1,13 @@
+//-- scss:defaults --*/
+$grass-font: "Fira Sans", sans-serif;
+
 /*-- scss:rules --*/
 
-// Revealjs theme colors
-// $link-color: $brand-primary;
-// $presentation-heading-color: $brand-primary;
+ul.pagination li.disabled a,
+ul.pagination li.active a {
+  background-color: $brand-dark-green !important;
+  color: $brand-white !important;
+}
 
 .highlight {
     color: $primary;
