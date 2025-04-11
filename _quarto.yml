@@ -18,6 +18,10 @@ website:
       Partially supported by US NSF
       [![](/images/logos/NSF_Official_logo_100x100.png){fig-alt="NSF" width=45px}](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2303651)
     center: Content is dual-licensed under [GFDL-1.2-or-later](https://www.gnu.org/licenses/fdl-1.2.html) and [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+    # Quarto does not support the icon tag to use FontAwesome.
+    # The workaround is to use the fa icon in the text.
+    # We do this for consistency with the rest of the sites.
+    # https://github.com/quarto-ext/fontawesome/issues/6
     right:
       - icon: opencollective
         href: https://opencollective.com/grass/contribute
@@ -48,7 +52,7 @@ execute:
   freeze: auto
 format:
   html:
-    theme: [brand, pandoc, theme.scss]
+    theme: [pandoc, theme.scss, brand]
     toc: true
     toc-title: Table of Contents
     link-external-newwindow: true
