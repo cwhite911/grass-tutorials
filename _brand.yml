@@ -10,21 +10,21 @@ meta:
   founded: 1984
 typography:
   fonts:
-    - family: Open Sans Regular
-      source: bunny
-    - family: Open Sans Bold
-      source: bunny
-    - family: Fira Sans Medium
+    - family: Open Sans
       source: bunny
     - family: Fira Code
       source: bunny
-  base: Open Sans Regular
+  base:
+   family: Open Sans
+   weight: 400
   headings:
-    family: Open Sans Bold
-    color: alt_blue
+    family: Open Sans
+    weight: 500
+    color: dark_grey
   link:
+    weight: 400
     color: secondary
-  monospace: Fira Code
+  monospace: "Fira Code"
  
 
 # https://posit-dev.github.io/brand-yml/brand/color.html
