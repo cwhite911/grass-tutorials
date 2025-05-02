@@ -8,55 +8,6 @@ meta:
   description: |
     Bringing advanced geospatial technologies to the world
   founded: 1984
-typography:
-  fonts:
-    - family: Open Sans
-      source: bunny
-    - family: Fira Code
-      source: bunny
-  base:
-   family: Open Sans
-   weight: 400
-  headings:
-    family: Open Sans
-    weight: 500
-    color: dark_grey
-  link:
-    weight: 400
-    color: secondary
-  monospace: "Fira Code"
- 
-
-# https://posit-dev.github.io/brand-yml/brand/color.html
-color:
-  palette:
-    green: "#4cb05b"
-    alt_green: "#6ed079"
-    light_green: "#87e991"
-    dark_green: "#088b36"
-    blue: "#00393f"
-    alt_blue: "#27575c"
-    light_blue: " #4a787d"
-    dark_blue: "#002024"
-    grey: "#91908f"
-    alt_grey: "#d8d8d8"
-    light_grey: "#f0f0f1"
-    dark_grey: "#757473"
-    black: "#021905"
-    white: "#f7f7f7"
-    support: "#f3398a"
-  foreground: black
-  background: white
-  primary: green
-  secondary: blue
-  tertiary: alt_blue
-  success: dark_green
-  info: light_green
-  warning: light_blue
-  danger: "#dc3545" # bootsrap5 danger
-  light: white
-  dark: black
-  link: dark_blue
 
 # https://posit-dev.github.io/brand-yml/brand/logo.html
 # https://sc.edu/about/offices_and_divisions/digital-accessibility/toolbox/best_practices/alternative_text/logo-alt-text/index.php
@@ -108,15 +59,4 @@ logo:
     light: logo-large-no-text-light
     dark: logo-large-no-text-dark
 
-defaults:
-  bootstrap:
-    # List of theme variables to override
-    # https://quarto.org/docs/output-formats/html-themes.html
-    defaults:
-      navbar-fg: white
-      navbar-hl: "$brand-alt-blue"
-      sidebar-fg: "$blue"
-      sidebar-hl: "$brand-alt-blue"
-      footer-bg: "$brand-green"
-      footer-fg: "$brand-white"
 

@@ -1,12 +1,221 @@
+// GRASS Theme
+/* GRASS Variables
+Use these variables to customize the GRASS theme.
+----------------------------------------------------------------------------- */
+/* GRASS Font */
+$gs-grass-font: 'Fira Sans Regular', sans-serif;
+$gs-grass-font--medium: 'Fira Sans Medium', sans-serif;
+$gs-grass-font--bold: 'Fira Sans Bold', sans-serif;
+$gs-grass-font--light: 'Fira Sans ExtraLight', sans-serif;
+$gs-grass-font--mono: 'Fira Mono', monospace;
+
+/* Primary Color */
+$gs-primary-color: rgb(76, 176, 91);
+$gs-primary-color--light: rgba(76, 176, 91, 0.541);
+$gs-primary-color--lighter: rgba(76, 176, 91, 0.322);
+$gs-primary-color--lightest: rgba(76, 176, 91, 0.071);
+
+/* Primary Alt Color */
+$gs-primary-alt-color: rgb(110, 208, 121);
+$gs-primary-alt-color--light: rgba(110, 208, 121, 0.541);
+$gs-primary-alt-color--lighter: rgba(110, 208, 121, 0.322);
+$gs-primary-alt-color--lightest: rgba(110, 208, 121, 0.071);
+
+/* Primary Light Color */
+$gs-primary-light-color: rgb(135, 233, 145);
+$gs-primary-light-color--light: rgba(135, 233, 145, 0.541);
+$gs-primary-light-color--lighter: rgba(138, 233, 145, 0.322);
+$gs-primary-light-color--lightest: rgba(138, 233, 145, 0.071);
+
+/* Primary Dark Color */
+$gs-primary-dark-color: rgb(8, 139, 54);
+$gs-primary-dark-color--light: rgba(8, 139, 54, 0.541);
+$gs-primary-dark-color--lighter: rgba(8, 139, 54, 0.322);
+$gs-primary-dark-color--lightest: rgba(8, 139, 54, 0.071);
+
+/* Secondary Color */
+$gs-secondary-color: rgb(0, 57, 63);
+$gs-secondary-color--light: rgba(0, 57, 63, 0.541);
+$gs-secondary-color--lighter: rgba(0, 57, 63, 0.322);
+$gs-secondary-color--lightest: rgba(0, 57, 63, 0.071);
+
+/* Secondary Alt Color */
+$gs-secondary-alt-color: rgb(39, 87, 92);
+$gs-secondary-alt-color--light: rgba(39, 87, 92, 0.541);
+$gs-secondary-alt-color--lighter: rgba(39, 87, 92, 0.322);
+$gs-secondary-alt-color--lightest: rgba(39, 87, 92, 0.071);
+
+/* Secondary Light Color */
+$gs-secondary-light-color: rgb(74, 120, 125);
+$gs-secondary-light-color--light: rgba(74, 121, 127, 0.541);
+$gs-secondary-light-color--lighter: rgba(74, 121, 127, 0.322);
+$gs-secondary-light-color--lightest: rgba(74, 121, 127, 0.071);
+
+/* Secondary Dark Color */
+$gs-secondary-dark-color: rgb(0, 32, 36);
+$gs-secondary-dark-color--light: rgba(0, 32, 36, 0.541);
+$gs-secondary-dark-color--lighter: rgba(0, 32, 36, 0.322);
+$gs-secondary-dark-color--lightest: rgba(0, 32, 36, 0.071);
+
+/* Special Colors */
+$gs-support-color: rgb(243, 57, 138);
+$gs-support-color--dark: rgba(243, 57, 138, 0.541);
+$gs-support-color--light: rgba(243, 57, 138, 0.322);
+$gs-yard-sign-color: rgb(116, 93, 2);
+
+/* White */
+$gs-white-base-color: rgb(255, 255, 255);
+$gs-white-color: rgb(247, 247, 247);
+$gs-white-color--light: rgba(247, 247, 247, 0.541);
+$gs-white-color--lighter: rgba(247, 247, 247, 0.322);
+$gs-white-color--lightest: rgba(247, 247, 247, 0.071);
+
+/* Black */
+$gs-black-base-color: rgb(0, 0, 0);
+$gs-black-color: rgb(2, 25, 5);
+$gs-black-color--light: rgba(2, 25, 5, 0.541);
+$gs-black-color--lighter: rgba(2, 25, 5, 0.322);
+$gs-black-color--lightest: rgba(2, 25, 5, 0.071);
+
+/* Grey */
+$gs-grey-color: rgb(145, 144, 143);
+$gs-grey-color--light: rgba(145, 144, 143, 0.541);
+$gs-grey-color--lighter: rgba(145, 144, 143, 0.322);
+$gs-grey-color--lightest: rgba(145, 144, 143, 0.071);
+
+/* Grey Alt */
+$gs-grey-alt-color: rgb(216, 216, 216);
+$gs-grey-alt-color--light: rgba(216, 216, 216, 0.541);
+$gs-grey-alt-color--lighter: rgba(216, 216, 216, 0.322);
+$gs-grey-alt-color--lightest: rgba(216, 216, 216, 0.071);
+
+/* Grey Light */
+$gs-grey-light-color: rgb(240, 240, 241);
+$gs-grey-light-color--light: rgba(240, 240, 241, 0.541);
+$gs-grey-light-color--lighter: rgba(240, 240, 241, 0.322);
+$gs-grey-light-color--lightest: rgba(240, 240, 241, 0.071);
+
+/* Grey Dark */
+$gs-grey-dark-color: rgb(78, 77, 76);
+$gs-grey-dark-color--light: rgba(78, 77, 76, 0.541);
+$gs-grey-dark-color--lighter: rgba(78, 77, 76, 0.322);
+$gs-grey-dark-color--lightest: rgba(78, 77, 76, 0.071);
+
+/* Images */
+// $gs-grass-background-image: url("/images/logos/banner.jpg");
+
+/* Icons */
+$gs-grass-logo-white-simple: url('images/logos/small/grass-logo-green-simple@05x.png');
+
 //-- scss:defaults --*/
-$grass-font: "Fira Sans", sans-serif;
+$primary: $gs-primary-color;
+$secondary: $gs-secondary-color;
+
+
+
+$body-bg: $gs-white-color;
+$body-color: $gs-black-color;
+$link-color: $primary;
+
+$navbar-fg: $gs-white-color;
+$navbar-hl: $gs-secondary-alt-color;
+
+$footer-bg: $gs-secondary-color;
+$footer-fg: $gs-white-color--light;
+
+$input-bg: $gs-white-base-color;
+$popover-bg: $body-bg;
+$font-family-sans-serif: $gs-grass-font;
+$font-family-monospace: $gs-grass-font--mono;
+$font-size-root: 16px;
+$toc-font-size: 1rem;
+
+$code-bg: $gs-grey-light-color;
+$code-block-bg: $gs-grey-light-color;
+
+// bootstrap
+$callout-color-note: $gs-primary-light-color;
+
+main.content > header {
+  h1 {
+      color: $gs-secondary-alt-color;
+      font-family: $gs-grass-font--bold;
+      font-weight: bold;
+      font-size: 2.25em;
+      line-height: 1.3;
+      margin: 0 0 1em;
+  }
+}
+
+main.content > section {
+  h2 {
+      font-family: $gs-grass-font--light;
+      color: $gs-secondary-light-color;
+      font-size: 2em;
+      text-transform: capitalize;
+      line-height: 1.4;
+      margin: .64em 0 .64em;
+  }
+}
+
+h3 {
+  color: $gs-secondary-light-color;
+  font-size: 1.25em;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.5;
+  margin: 1.6em 0 .8em;
+}
 
 /*-- scss:rules --*/
-
 ul.pagination li.disabled a,
 ul.pagination li.active a {
-  background-color: $brand-dark-green !important;
-  color: $brand-white !important;
+  background-color: $gs-primary-color !important;
+  color: $gs-white-base-color !important;
+}
+
+#quarto-margin-sidebar .quarto-listing-category-title {
+  color: $gs-secondary-alt-color;
+}
+
+.sidebar nav[role=doc-toc]>h2 {
+  color: $gs-secondary-alt-color;
+  font-weight: 700;
+}
+
+.card {
+  .card-body {
+    background-color: $gs-white-base-color;
+  }
+}
+
+.input-group-text {
+  background-color: $gs-primary-color;
+  color: $gs-white-base-color;
+  font-weight: 700;
+}
+
+.callout {
+  &.callout-style-default {
+      box-shadow: 0 0.2rem 0.5rem $gs-black-color--light,
+        0 0 0.05rem $gs-black-color--lightest;
+      transition: box-shadow 125ms;
+      border-radius: .2rem;
+  
+      >div.callout-header {
+        font-weight: 700;
+      }
+  
+      .callout-note {
+        border-color: $gs-primary-light-color;
+  
+        &.callout-titled {
+          .callout-icon::before {
+            background-image: $gs-grass-logo-white-simple;
+          }
+        }
+      }
+    }
 }
 
 .highlight {
@@ -36,26 +245,18 @@ ul.pagination li.active a {
     width: 100%;
     height: 100%;
     border-radius: 60%;
-    background: linear-gradient(to bottom, $brand-white, $brand-dark-green);
+    background: linear-gradient(to bottom, $gs-white-color, $gs-primary-dark-color);
     opacity: 1;
     z-index: -1;
   }
 
-.quarto-title-banner {
-  background-color: $brand-light-green !important;
-  color: $brand-black !important;
-  h1 {
-    color: $brand-black !important;
-  }
-}
-
 .reveal {
     h3 {
-        color: $brand-black !important;
+        color: $gs-black-color !important;
     }
     .columns {
         .column {
-            background-color: $brand-grey !important; 
+            background-color: $gs-grey-color !important; 
         }
         
     }
@@ -69,7 +270,7 @@ ul.pagination li.active a {
 }
 
 .text-white {
-    color: $brand-white !important;
+    color: $gs-white-color !important;
 }
 
 .text-center {
