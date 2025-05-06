@@ -183,6 +183,11 @@ ul.pagination li.active a {
   font-weight: 700;
 }
 
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: $gs-white-base-color;
+}
+
 .card {
   .card-body {
     background-color: $gs-white-base-color;
@@ -193,6 +198,14 @@ ul.pagination li.active a {
   background-color: $gs-primary-color;
   color: $gs-white-base-color;
   font-weight: 700;
+}
+
+.form-control:focus {
+  color: #021905;
+  background-color: #fff;
+  border-color: $gs-primary-alt-color;
+  outline: 0;
+  box-shadow: 0 0 0 .05rem $gs-primary-color--lighter;
 }
 
 .callout {
