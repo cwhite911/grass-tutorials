@@ -150,7 +150,8 @@ $navbar-hl: $gs-secondary-alt-color;
 
 // Footer
 $footer-bg: $gs-secondary-color;
-$footer-fg: $gs-white-color--light;
+$footer-fg: $gs-white-base-color;
+$footer-link-hl: $gs-white-color--light;
 
 // Inputs
 $input-bg: $gs-white-base-color;
@@ -565,4 +566,19 @@ input[type=checkbox] {
 // Front Matter
 .quarto-title .quarto-categories {
   color: $gs-primary-color;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+footer {
+
+  a, i {
+
+    &:hover,
+    &:focus {
+      color: $footer-link-hl;
+      text-decoration: underline;
+    }
+  }
 }
