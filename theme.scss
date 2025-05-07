@@ -57,12 +57,6 @@ $gs-secondary-dark-color--light: rgba(0, 32, 36, 0.541);
 $gs-secondary-dark-color--lighter: rgba(0, 32, 36, 0.322);
 $gs-secondary-dark-color--lightest: rgba(0, 32, 36, 0.071);
 
-/* Special Colors */
-$gs-support-color: rgb(243, 57, 138);
-$gs-support-color--dark: rgba(243, 57, 138, 0.541);
-$gs-support-color--light: rgba(243, 57, 138, 0.322);
-$gs-yard-sign-color: rgb(116, 93, 2);
-
 /* White */
 $gs-white-base-color: rgb(255, 255, 255);
 $gs-white-color: rgb(247, 247, 247);
@@ -101,6 +95,22 @@ $gs-grey-dark-color--light: rgba(78, 77, 76, 0.541);
 $gs-grey-dark-color--lighter: rgba(78, 77, 76, 0.322);
 $gs-grey-dark-color--lightest: rgba(78, 77, 76, 0.071);
 
+/* Special Colors */
+$gs-support-color: rgb(243, 57, 138);
+$gs-support-color--dark: rgba(243, 57, 138, 0.541);
+$gs-support-color--light: rgba(243, 57, 138, 0.322);
+$gs-yard-sign-color: rgb(116, 93, 2);
+
+/* Bootstrap Mapping Colors */
+// $gs-primary-color: $gs-primary-color; Defined above
+// $gs-secondonary-color: $gs-secondary-color; Defined above
+$gs-danger-color: rgb(176, 76, 76);
+$gs-warning-color: rgb(176, 154, 76);
+$gs-success-color: $gs-primary-alt-color;
+$gs-info-color: $gs-secondary-alt-color;
+$gs-light-color: $gs-grey-light-color;
+$gs-dark-color: $gs-grey-dark-color;
+
 /* Images */
 // $gs-grass-background-image: url("/images/logos/banner.jpg");
 
@@ -108,26 +118,43 @@ $gs-grey-dark-color--lightest: rgba(78, 77, 76, 0.071);
 $gs-grass-logo-white-simple: url('images/logos/small/grass-logo-green-simple@05x.png');
 
 //-- scss:defaults --*/
+
+// Bootstrap Variables
+/*---------------------------------------------------------------------------*/
 $primary: $gs-primary-color;
 $secondary: $gs-secondary-color;
+$success: $gs-success-color;
+$info: $gs-info-color;
+$warning: $gs-warning-color;
+$danger: $gs-danger-color;
+$light: $gs-grey-light-color;
+$dark: $gs-grey-dark-color;
 
-
+// Quarto Variables
+/*---------------------------------------------------------------------------*/
 
 $body-bg: $gs-white-color;
 $body-color: $gs-black-color;
 $link-color: $primary;
-
-$navbar-fg: $gs-white-color;
-$navbar-hl: $gs-secondary-alt-color;
-
-$footer-bg: $gs-secondary-color;
-$footer-fg: $gs-white-color--light;
-
-$input-bg: $gs-white-base-color;
-$popover-bg: $body-bg;
 $font-family-sans-serif: $gs-grass-font;
 $font-family-monospace: $gs-grass-font--mono;
 $font-size-root: 16px;
+
+// Navbar
+$navbar-fg: $gs-white-color;
+$navbar-hl: $gs-secondary-alt-color;
+
+// Footer
+$footer-bg: $gs-secondary-color;
+$footer-fg: $gs-white-color--light;
+
+// Inputs
+$input-bg: $gs-white-base-color;
+
+// Popover
+$popover-bg: $body-bg;
+
+// Table of Contents
 $toc-font-size: 1rem;
 
 // Code Variables
@@ -137,11 +164,16 @@ $code-block-bg: $gs-grey-light-color;
 $code-keyword-color: $gs-primary-color;
 $code-string-color: $gs-primary-color;
 
-// bootstrap
+// Callouts
 $callout-color-note: $gs-primary-light-color;
+$callout-color-warning: $gs-warning-color;
+$callout-color-tip: $gs-info-color;
+$callout-color-caution: $gs-danger-color;
+$callout-color-important: $gs-primary-dark-color;
 
 /*-- scss:rules --*/
 
+// Header Styles
 h1 {
   color: $gs-secondary-alt-color;
   font-family: $gs-grass-font--bold;
@@ -169,14 +201,17 @@ h3 {
   margin: 1.6em 0 .8em;
 }
 
-
+// Code Styles
 code {
   span {
+    .al {
+      color: $gs-primary-color;
+      font-style: inherit;
+    }
     .im {
       color: $code-keyword-color;
       font-style: inherit;
     }
-
     .st {
       color: $code-string-color;
       font-style: inherit;
@@ -184,6 +219,110 @@ code {
   }
 }
 
+// Button Styles
+.btn {
+  font-family: $gs-grass-font--medium;
+  font-size: 1em;
+  font-weight: 700;
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+}
+.btn-primary {
+  background-color: $gs-primary-color;
+  border-color: $gs-primary-color;
+  color: $gs-white-base-color;
+  &:hover,
+  &:focus {
+    background-color: $gs-primary-alt-color;
+    border-color: $gs-primary-alt-color;
+    color: $gs-white-base-color;
+  }
+}
+.btn-secondary {
+  background-color: $gs-secondary-color;
+  border-color: $gs-secondary-color;
+  color: $gs-white-base-color;
+  &:hover,
+  &:focus {
+    background-color: $gs-secondary-light-color;
+    border-color: $gs-secondary-light-color;
+    color: $gs-white-base-color;
+  }
+}
+.btn-success {
+  background-color: $gs-black-color;
+  border-color: $gs-success-color;
+  color: $gs-success-color;
+  &:hover,
+  &:focus {
+    background-color: $gs-black-color;
+    border-color: $gs-primary-light-color;
+    color: $gs-primary-light-color;
+  }
+}
+
+.btn-support {
+  background-color: $gs-support-color;
+  border-color: $gs-support-color;
+  color: $gs-white-base-color;
+  &:hover,
+  &:focus {
+    background-color: $gs-support-color--dark;
+    border-color: $gs-support-color--dark;
+    color: $gs-white-base-color;
+  }
+}
+
+.btn-outline-primary {
+  background-color: $gs-white-base-color;
+  border-color: $gs-primary-color;
+  color: $gs-primary-color;
+  &:hover,
+  &:focus {
+    background-color: $gs-primary-color;
+    border-color: $gs-primary-alt-color;
+    color: $gs-white-base-color;
+  }
+}
+
+.btn-outline-secondary {
+  background-color: $gs-white-base-color;
+  border-color: $gs-secondary-color;
+  color: $gs-secondary-color;
+  &:hover,
+  &:focus {
+    background-color: $gs-secondary-light-color;
+    border-color: $gs-secondary-light-color;
+    color: $gs-white-base-color;
+  }
+}
+
+.btn-outline-success {
+  background-color: $gs-white-base-color;
+  border-color: $gs-success-color;
+  color: $gs-success-color;
+  &:hover,
+  &:focus {
+    background-color: $gs-black-color;
+    border-color: $gs-black-color;
+    color: $gs-primary-light-color;
+  }
+}
+
+.btn-outline-support {
+  background-color: $gs-white-base-color;
+  border-color: $gs-support-color;
+  color: $gs-support-color;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; // Space between icon and text
+  &:hover,
+  &:focus {
+    background-color: $gs-support-color;
+    border-color: $gs-support-color;
+    color: $gs-white-base-color;
+  }
+}
 
 ul.pagination li.disabled a,
 ul.pagination li.active a {
@@ -217,9 +356,44 @@ ul.pagination li.active a {
   font-weight: 700;
 }
 
+input[type=checkbox] {
+  appearance: none; // Ensure custom styles apply
+  height: 0.9rem;
+  border: 2px solid $gs-primary-color;
+  border-radius: 0.2rem;
+  background-color: $gs-white-base-color;
+  padding: 0.2rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:checked {
+    background-color: $gs-primary-color;
+    border-color: $gs-primary-color;
+
+    &::after {
+      font-family: 'Font Awesome 6 Free'; // Ensure Font Awesome is loaded
+      content: '\f00c'; // Add a checkmark when selected
+      color: $gs-white-base-color;
+      font-size: 0.75rem; // Adjust size of the checkmark
+    }
+  }
+
+  &:disabled {
+    background-color: $gs-primary-light-color;
+    border-color: $gs-primary-light-color;
+    cursor: not-allowed;
+  }
+  &:disabled:checked {
+    background-color: $gs-primary-light-color;
+    border-color: $gs-primary-light-color;
+  }
+}
+
 .form-control:focus {
-  color: #021905;
-  background-color: #fff;
+  color: $gs-black-color;
+  background-color: $gs-white-base-color;
   border-color: $gs-primary-alt-color;
   outline: 0;
   box-shadow: 0 0 0 .05rem $gs-primary-color--lighter;
