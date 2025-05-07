@@ -112,11 +112,15 @@ $gs-light-color: $gs-grey-light-color;
 $gs-dark-color: $gs-grey-dark-color;
 
 /* Images */
-// $gs-grass-background-image: url("/images/logos/banner.jpg");
+$gs-images-base-path: 'images';
+$gs-svg-logos-base-path: $gs-images-base-path + '/logos/large';
+$gs-icons-base-path: $gs-images-base-path + '/icons';
+
 
 /* Icons */
 $gs-grass-logo-white-simple: url('images/logos/small/grass-logo-green-simple@05x.png');
-
+$gs-grass-logo-simple-svg: url($gs-svg-logos-base-path + '/grass-green-no-text.svg');
+$gs-grass-icon: url($gs-icons-base-path + '/grass-icon.svg');
 //-- scss:defaults --*/
 
 // Bootstrap Variables
@@ -171,9 +175,56 @@ $callout-color-tip: $gs-info-color;
 $callout-color-caution: $gs-danger-color;
 $callout-color-important: $gs-primary-dark-color;
 
+/*-- scss:mixins --*/
+/* Mixin for custom button styles */
+
+/// @mixin box-shadow-default
+/// This mixin applies a default box-shadow styling to an element.
+/// 
+/// The box-shadow consists of:
+/// - A larger, softer shadow with a light black color.
+/// - A smaller, sharper shadow with a lighter black color.
+/// 
+/// Variables used:
+/// - `$gs-black-color--light`: Represents the light black color for the larger shadow.
+/// - `$gs-black-color--lightest`: Represents the lightest black color for the smaller shadow.
+@mixin box-shadow-default {
+  box-shadow: 0 0.2rem 0.5rem $gs-black-color--light, 0 0 0.05rem $gs-black-color--lightest;
+}
+
+/// @mixin apply-color-filter
+/// Applies a CSS filter to an element based on a given source color.
+/// 
+/// @param {Color} $source-color - The source color.
+/// @param {Boolean} $important - If true, adds !important to the filter.
+/// 
+/// This mixin:
+/// - Extracts HSL components from the source color.
+/// - Uses hue, saturation, and an adjusted brightness in a CSS filter.
+@mixin apply-color-filter($source-color,
+$important: false) {
+  $hue: hue($source-color);
+  $saturation: saturation($source-color);
+  $lightness: lightness($source-color);
+
+  // Strip units from % values
+  $saturation-value: $saturation / 1%;
+  $lightness-value: $lightness / 1%;
+
+  // Optional scaling to emphasize effect
+  $saturation-factor: floor($saturation-value) * 2 / 100;
+  $brightness-factor: floor($lightness-value) *2;
+
+  // Check if the important flag is set
+  $important-flag: if($important, ' !important', '');
+
+  filter: hue-rotate(#{$hue}deg) saturate($saturation-factor) brightness(#{$brightness-factor})#{$important-flag}; 
+}
+
 /*-- scss:rules --*/
 
-// Header Styles
+/* Header Styles
+-----------------------------------------------------------------------------*/
 h1 {
   color: $gs-secondary-alt-color;
   font-family: $gs-grass-font--bold;
@@ -201,7 +252,8 @@ h3 {
   margin: 1.6em 0 .8em;
 }
 
-// Code Styles
+/* Code Styles
+-----------------------------------------------------------------------------*/
 code {
   span {
     .al {
@@ -219,7 +271,8 @@ code {
   }
 }
 
-// Button Styles
+/* Button Styles
+-----------------------------------------------------------------------------*/
 .btn {
   font-family: $gs-grass-font--medium;
   font-size: 1em;
@@ -267,8 +320,9 @@ code {
   color: $gs-white-base-color;
   &:hover,
   &:focus {
-    background-color: $gs-support-color--dark;
-    border-color: $gs-support-color--dark;
+    @include box-shadow-default;
+    background-color: $gs-support-color;
+    border-color: $gs-support-color;
     color: $gs-white-base-color;
   }
 }
@@ -299,13 +353,37 @@ code {
 
 .btn-outline-success {
   background-color: $gs-white-base-color;
-  border-color: $gs-success-color;
+  border-color: $gs-black-color;
   color: $gs-success-color;
   &:hover,
   &:focus {
     background-color: $gs-black-color;
     border-color: $gs-black-color;
     color: $gs-primary-light-color;
+  }
+}
+
+.btn-outline-light {
+  background-color: $gs-white-base-color;
+  border-color: $gs-grey-color;
+  color: $gs-grey-color;
+  &:hover,
+  &:focus {
+    background-color: $gs-grey-color;
+    border-color: $gs-grey-color;
+    color: $gs-white-base-color;
+  }
+}
+
+.btn-outline-link {
+  border-color: $gs-primary-color;
+  color: $gs-primary-color;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    border-color: $gs-primary-dark-color;
+    color: $gs-primary-dark-color;
   }
 }
 
@@ -318,12 +396,15 @@ code {
   gap: 0.5rem; // Space between icon and text
   &:hover,
   &:focus {
+    @include box-shadow-default;
     background-color: $gs-support-color;
     border-color: $gs-support-color;
     color: $gs-white-base-color;
   }
 }
 
+/* Listings
+-----------------------------------------------------------------------------*/
 ul.pagination li.disabled a,
 ul.pagination li.active a {
   background-color: $gs-primary-color !important;
@@ -334,21 +415,31 @@ ul.pagination li.active a {
   color: $gs-secondary-alt-color;
 }
 
+
+/* Table of Contents
+-----------------------------------------------------------------------------*/
 .sidebar nav[role=doc-toc]>h2 {
   color: $gs-secondary-alt-color;
   font-weight: 700;
 }
 
+/* Navbar
+-----------------------------------------------------------------------------*/
 .navbar-brand:hover,
 .navbar-brand:focus {
   color: $gs-white-base-color;
 }
 
+/* Cards
+-----------------------------------------------------------------------------*/
 .card {
   .card-body {
     background-color: $gs-white-base-color;
   }
 }
+
+/* Input Styles
+-----------------------------------------------------------------------------*/
 
 .input-group-text {
   background-color: $gs-primary-color;
@@ -399,97 +490,79 @@ input[type=checkbox] {
   box-shadow: 0 0 0 .05rem $gs-primary-color--lighter;
 }
 
+/* Callouts
+-----------------------------------------------------------------------------*/
 .callout {
   &.callout-style-default {
-      box-shadow: 0 0.2rem 0.5rem $gs-black-color--light,
-        0 0 0.05rem $gs-black-color--lightest;
-      transition: box-shadow 125ms;
-      border-radius: .2rem;
+    @include box-shadow-default;
+    transition: box-shadow 125ms;
+    border-radius: .2rem;
   
-      >div.callout-header {
+    >div.callout-header {
         font-weight: 700;
-      }
+    }
+  }
+}
+
+.callout-note {
+  border-color: $callout-color-note;
   
-      .callout-note {
-        border-color: $gs-primary-light-color;
-  
-        &.callout-titled {
-          .callout-icon::before {
-            background-image: $gs-grass-logo-white-simple;
-          }
-        }
+  &.callout-titled {
+    color: $gs-primary-dark-color;
+    .callout-icon {
+      &::before {
+        background-image: $gs-grass-logo-white-simple !important;
       }
     }
+    .callout-body {
+      color: $gs-black-color;
+    }
+  }
+}
+
+.callout-tip {
+  border-color: $callout-color-tip;
+  color: $callout-color-tip;
+
+  &.callout-titled {
+    .callout-icon {
+      &::before {
+        background-image: $gs-grass-logo-white-simple !important;
+      }
+    }
+    .callout-body {
+      color: $gs-black-color;
+    }
+  }
+}
+
+.callout-warning {
+  border-color: $callout-color-warning;
+  color: $gs-secondary-alt-color;
+
+  &.callout-titled {
+    .callout-icon {
+      &::before {
+        // Not sure why this isn't working with the SVG
+        // background-image: $gs-grass-icon-svg !important;
+        fill: $gs-secondary-alt-color !important;
+        background-image: $gs-grass-logo-white-simple !important;
+        @include apply-color-filter($gs-secondary-alt-color, true);
+      }
+    }
+
+    .callout-body {
+      color: $gs-black-color;
+    }
+  }
 }
 
 .highlight {
-    color: $primary;
-    font-weight: bold;
-  }
-
-.circle-image-container {
-    position: relative;
-    height: auto;
-    display: inline-block;
-  }
-  
-  .circle-image {
-    border-radius: 50%;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .circle-image-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 60%;
-    background: linear-gradient(to bottom, $gs-white-color, $gs-primary-dark-color);
-    opacity: 1;
-    z-index: -1;
-  }
-
-.reveal {
-    h3 {
-        color: $gs-black-color !important;
-    }
-    .columns {
-        .column {
-            background-color: $gs-grey-color !important; 
-        }
-        
-    }
-    .quarto-title-block { 
-
-        .quarto-title-acknowledgements {
-        color: $primary !important;
-        font-size: 0.6em;
-        }
-    }
+  color: $primary;
+  font-weight: bold;
 }
 
-.text-white {
-    color: $gs-white-color !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-/* Custom GRASS support button style: */
-.md-button.gs-support-button {
-  color: $gs-support-color;
-  margin: 0 0.25rem;
-}
-
-.md-button.gs-support-button:focus,
-.md-button.gs-support-button:hover {
-  background-color: $gs-support-color;
-  border-color: $gs-support-color;
-  color: $gs-white-color;
+// Front Matter
+.quarto-title .quarto-categories {
+  color: $gs-primary-color;
 }

@@ -6,6 +6,7 @@ author:
     - name: Sarah White
 date: May 5, 2025
 date-modified: today
+categories: ['design', 'guide', 'styling']
 format: 
   html:
     other-links:
@@ -506,7 +507,7 @@ See @tbl-panel for details, especially @tbl-second.
 Note that there are five types of callouts, including: 
 `note`, `tip`, `warning`, `caution`, and `important`.
 
-### Note
+### Note {.text-primary}
 
 ::: {.callout-note}
 This is a note callout.
@@ -518,27 +519,27 @@ This is a note callout.
 :::
 ```
 
-### Warning
+### Tip {.text-secondary}
 
-::: {.callout-warning}
-This is a warning callout.
+::: {.callout-tip}
+This is a tip callout.
 :::
 
 ```md
-::: {.callout-warning}
-This is a warning callout.
+::: {.callout-tip}
+This is a tip callout.
 :::
 ```
 
-### Tip
+### Warning {.text-warning}
 
-::: {.callout-tip}
-This is a tip callout.
+::: {.callout-warning}
+This is a warning callout.
 :::
 
 ```md
-::: {.callout-tip}
-This is a tip callout.
+::: {.callout-warning}
+This is a warning callout.
 :::
 ```
 
@@ -582,29 +583,62 @@ $$
 
 ## Buttons
 
+### Solid Color
+
 [Primary](#){.btn .btn-primary .btn role="button"}
 [Secondary](#){.btn .btn-secondary .btn role="button"}
 [Success](#){.btn .btn-success .btn role="button"}
-{{< include /content/include/_support-button.qmd >}}
+[Danger](#){.btn .btn-danger .btn role="button"}
+[Warning](#){.btn .btn-warning .btn role="button"}
+[Info](#){.btn .btn-info .btn role="button"}
+[Light](#){.btn .btn-light .btn role="button"}
+[Dark](#){.btn .btn-dark .btn role="button"}
+[Link](#){.btn .btn-link .btn role="button"}
+
+
 
 ```md
 [Primary](#){.btn .btn-primary .btn role="button"}
 [Secondary](#){.btn .btn-secondary .btn role="button"}
 [Success](#){.btn .btn-success .btn role="button"}
-{{< include /content/include/_support-button.qmd >}}
+[Danger](#){.btn .btn-danger .btn role="button"}
+[Warning](#){.btn .btn-warning .btn role="button"}
+[Info](#){.btn .btn-info .btn role="button"}
+[Light](#){.btn .btn-light .btn role="button"}
+[Dark](#){.btn .btn-dark .btn role="button"}
+[Link](#){.btn .btn-link .btn role="button"}
 ```
+
+### Outline Color
 
 [Primary Outline](#){.btn .btn-outline-primary .btn role="button"}
 [Secondary Outline](#){.btn .btn-outline-secondary .btn role="button"}
 [Success Outline](#){.btn .btn-outline-success .btn role="button"}
-[{{< fa heart >}} Support](#){.btn .btn-outline-support .btn role="button"}
+[Danger Outline](#){.btn .btn-outline-danger .btn role="button"}
+[Warning Outline](#){.btn .btn-outline-warning .btn role="button"}
+[Info Outline](#){.btn .btn-outline-info .btn role="button"}
+[Light Outline](#){.btn .btn-outline-light .btn role="button"}
+[Dark Outline](#){.btn .btn-outline-dark .btn role="button"}
+[Link Outline](#){.btn .btn-outline-link .btn role="button"}
 
 ```md
 [Primary Outline](#){.btn .btn-outline-primary .btn role="button"}
 [Secondary Outline](#){.btn .btn-outline-secondary .btn role="button"}
 [Success Outline](#){.btn .btn-outline-success .btn role="button"}
-[{{< fa heart >}} Support](#){.btn .btn-outline-support .btn role="button"}
+[Danger Outline](#){.btn .btn-outline-danger .btn role="button"}
+[Warning Outline](#){.btn .btn-outline-warning .btn role="button"}
+[Info Outline](#){.btn .btn-outline-info .btn role="button"}
+[Light Outline](#){.btn .btn-outline-light .btn role="button"}
+[Dark Outline](#){.btn .btn-outline-dark .btn role="button"}
+[Link Outline](#){.btn .btn-outline-link .btn role="button"}
 ```
+
+### Special Buttons
+
+We have a custom support buttons ([More Info](#includes)) that link to GRASS's [Open Collective page]({{< var grass.support >}})
+
+{{< include /content/include/_support-button.qmd >}}
+{{< include /content/include/_support-outline-button.qmd >}}
 
 ## Alerts
 
@@ -882,6 +916,3 @@ Brand data is defined in the `_brand.yml` file.
 ```
 
 {{< brand logo small light >}}
-
-<!-- #### Logo medium dark
-{{< brand logo medium light >}} -->
