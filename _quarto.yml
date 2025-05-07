@@ -2,7 +2,10 @@ project:
   type: website
   output-dir: docs
 website:
+  site-url: "https://grass-tutorials.osgeo.org"
   favicon: images/favicon.ico
+  twitter-card: true
+  open-graph: true
   navbar:
     title: Learn GRASS
     search: true
