@@ -51,6 +51,9 @@ website:
         href: https://github.com/OSGeo/grass
         aria-label: GRASS on GitHub
 
+  margin-header	: |
+    [{{< fa heart >}} Support GRASS]({{< var grass.support >}}){.btn .btn-outline-support .btn role="button" align="center"}
+
 execute:
   freeze: auto
 format:
