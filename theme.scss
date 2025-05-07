@@ -431,6 +431,35 @@ ul.pagination li.active a {
   color: $gs-white-base-color;
 }
 
+.quarto-title-banner {
+  margin-bottom: 1em;
+  color: $gs-secondary-alt-color;
+  background: $gs-primary-light-color--lighter;
+
+  h1 {
+    color: $gs-secondary-alt-color;
+  }
+
+  .code-tools-button {
+    color: $gs-white-color;
+    background-color: $gs-secondary-alt-color !important;
+  }
+
+  .dropdown-item {
+    color: $gs-secondary-alt-color !important;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: $gs-primary-alt-color !important;
+    color: $gs-white-base-color !important;
+  }
+
+  .quarto-categories {
+    color: $gs-secondary-alt-color !important;
+  }
+}
+
 /* Cards
 -----------------------------------------------------------------------------*/
 .card {
@@ -568,6 +597,11 @@ input[type=checkbox] {
   color: $gs-primary-color;
 }
 
+.quarto-title-meta-heading {
+  color: $gs-primary-color;
+  font-family: $gs-grass-font--medium;
+  font-weight: 700;
+}
 
 /* Footer
 -----------------------------------------------------------------------------*/
