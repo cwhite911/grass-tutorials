@@ -1,6 +1,8 @@
 ---
 title: GRASS Quarto Design Guide
 description: Adopted from Quarto Documentatoin
+image: images/LinkedIn-Post-Image.png
+title-block-banner: true
 author:
     - name: Corey White
     - name: Sarah White
