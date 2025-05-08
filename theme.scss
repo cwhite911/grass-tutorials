@@ -1,3 +1,4 @@
+//-- scss:defaults --*/
 // GRASS Theme
 /* GRASS Variables
 Use these variables to customize the GRASS theme.
@@ -121,8 +122,19 @@ $gs-icons-base-path: $gs-images-base-path + '/icons';
 $gs-grass-logo-white-simple: url('images/logos/small/grass-logo-green-simple@05x.png');
 $gs-grass-logo-simple-svg: url($gs-svg-logos-base-path + '/grass-green-no-text.svg');
 $gs-grass-icon: url($gs-icons-base-path + '/grass-icon.svg');
-//-- scss:defaults --*/
 
+// Description: This file defines Bootstrap theme variables by mapping them 
+//              to custom color variables. These variables are used to 
+//              customize the appearance of the Bootstrap framework.
+// Variables:
+// - $primary: Primary theme color, mapped to $gs-primary-color.
+// - $secondary: Secondary theme color, mapped to $gs-secondary-color.
+// - $success: Success state color, mapped to $gs-success-color.
+// - $info: Informational state color, mapped to $gs-info-color.
+// - $warning: Warning state color, mapped to $gs-warning-color.
+// - $danger: Danger/error state color, mapped to $gs-danger-color.
+// - $light: Light theme color, mapped to $gs-grey-light-color.
+// - $dark: Dark theme color, mapped to $gs-grey-dark-color.
 // Bootstrap Variables
 /*---------------------------------------------------------------------------*/
 $primary: $gs-primary-color;
@@ -134,8 +146,52 @@ $danger: $gs-danger-color;
 $light: $gs-grey-light-color;
 $dark: $gs-grey-dark-color;
 
+// ---------------------------------------------------------------------------
 // Quarto Variables
-/*---------------------------------------------------------------------------*/
+// ---------------------------------------------------------------------------
+// This section defines the primary variables used throughout the theme,
+// including body background, text color, link color, font families, and root
+// font size.
+
+// Navbar
+// ---------------------------------------------------------------------------
+// Variables for styling the navigation bar, including foreground and highlight
+// colors.
+
+// Footer
+// ---------------------------------------------------------------------------
+// Variables for styling the footer, including background, foreground, and link
+// highlight colors.
+
+// Inputs
+// ---------------------------------------------------------------------------
+// Variables for input field styling, such as background color.
+
+// Popover
+// ---------------------------------------------------------------------------
+// Variables for popover styling, including background color.
+
+// Table of Contents
+// ---------------------------------------------------------------------------
+// Variables for styling the table of contents, such as font size.
+
+// Code
+// ---------------------------------------------------------------------------
+// Variables for code block styling, including text color, background color,
+// and syntax highlighting for keywords and strings.
+
+// Callouts
+// ---------------------------------------------------------------------------
+// Variables for callout box styling, with specific colors for different types
+// of callouts (e.g., note, warning, tip, caution, important).
+
+// Mermaid Theme
+// ---------------------------------------------------------------------------
+// Variables for Mermaid diagram styling, including background, edge, node,
+// and label colors, as well as font family and transparency settings.
+/* Quarto Variables
+
+---------------------------------------------------------------------------*/
 
 $body-bg: $gs-white-color;
 $body-color: $gs-black-color;
@@ -144,37 +200,60 @@ $font-family-sans-serif: $gs-grass-font;
 $font-family-monospace: $gs-grass-font--mono;
 $font-size-root: 16px;
 
-// Navbar
+/* Navbar
+-----------------------------------------------------------------------------*/
 $navbar-fg: $gs-white-color;
 $navbar-hl: $gs-secondary-alt-color;
 
-// Footer
+/* Footer
+-----------------------------------------------------------------------------*/
 $footer-bg: $gs-secondary-color;
 $footer-fg: $gs-white-base-color;
 $footer-link-hl: $gs-white-color--light;
 
-// Inputs
+/* Inputs
+-----------------------------------------------------------------------------*/
 $input-bg: $gs-white-base-color;
 
-// Popover
+/* Popover
+-----------------------------------------------------------------------------*/
 $popover-bg: $body-bg;
 
-// Table of Contents
+/* Table of Contents
+-----------------------------------------------------------------------------*/
 $toc-font-size: 1rem;
 
-// Code Variables
+/* Code
+-----------------------------------------------------------------------------*/
 $code-color: $gs-secondary-color;
 $code-bg: $gs-grey-light-color;
 $code-block-bg: $gs-grey-light-color;
 $code-keyword-color: $gs-primary-color;
 $code-string-color: $gs-primary-color;
 
-// Callouts
+/* Callouts
+Quarto Docs: https: //quarto.org/docs/authoring/callouts.html
+-----------------------------------------------------------------------------*/
 $callout-color-note: $gs-primary-light-color;
 $callout-color-warning: $gs-warning-color;
 $callout-color-tip: $gs-info-color;
 $callout-color-caution: $gs-danger-color;
 $callout-color-important: $gs-primary-dark-color;
+
+/* Mermaid Theme
+Quarto Docs: https: //quarto.org/docs/authoring/diagrams.html
+-----------------------------------------------------------------------------*/
+$mermaid-bg-color: $body-bg;
+$mermaid-edge-color: $secondary;
+$mermaid-node-fg-color: $body-color;
+$mermaid-fg-color: $body-color;
+$mermaid-fg-color--lighter: lighten($body-color, 10%);
+$mermaid-fg-color--lightest: lighten($body-color, 20%);
+$mermaid-font-family: $gs-grass-font;
+$mermaid-label-bg-color: $body-bg;
+$mermaid-label-fg-color: $primary;
+$mermaid-node-bg-color: rgba($primary, 0.1);
+$mermaid-node-fg-color: $gs-primary-dark-color;
 
 /*-- scss:mixins --*/
 /* Mixin for custom button styles */
@@ -272,6 +351,50 @@ code {
   }
 }
 
+/* 
+Button Styles
+-----------------------------------------------------------------------------
+Defines the styles for various button components used in the project. 
+Each button style is designed with specific colors, borders, and hover/focus effects 
+to match the theme's design system.
+
+General Button Styles:
+- `.btn`: Base button styles including font, padding, and border-radius.
+
+Primary Buttons:
+- `.btn-primary`: Primary button with theme's primary color.
+- `.btn-outline-primary`: Outlined version of the primary button.
+
+Secondary Buttons:
+- `.btn-secondary`: Secondary button with theme's secondary color.
+- `.btn-outline-secondary`: Outlined version of the secondary button.
+
+Success Buttons:
+- `.btn-success`: Success button with theme's success color.
+- `.btn-outline-success`: Outlined version of the success button.
+
+Warning Buttons:
+- `.btn-warning`: Warning button with theme's warning color.
+- `.btn-outline-warning`: Outlined version of the warning button.
+
+Support Buttons:
+- `.btn-support`: Support button with theme's support color.
+- `.btn-outline-support`: Outlined version of the support button with icon support.
+
+Light Buttons:
+- `.btn-outline-light`: Outlined button with light/grey color scheme.
+
+Link Buttons:
+- `.btn-outline-link`: Outlined button styled as a link with underline.
+
+Hover and Focus States:
+- Each button includes hover and focus states to enhance interactivity.
+- Colors are adjusted (e.g., darkened or lightened) to provide visual feedback.
+
+Mixins and Utilities:
+- `@include box-shadow-default`: Applied to certain buttons for shadow effects.
+- `gap`: Used in `.btn-outline-support` for spacing between icon and text.
+*/
 /* Button Styles
 -----------------------------------------------------------------------------*/
 .btn {
@@ -281,6 +404,7 @@ code {
   padding: .5rem 1rem;
   border-radius: .25rem;
 }
+
 .btn-primary {
   background-color: $gs-primary-color;
   border-color: $gs-primary-color;
@@ -292,6 +416,7 @@ code {
     color: $gs-white-base-color;
   }
 }
+
 .btn-secondary {
   background-color: $gs-secondary-color;
   border-color: $gs-secondary-color;
@@ -303,6 +428,7 @@ code {
     color: $gs-white-base-color;
   }
 }
+
 .btn-success {
   background-color: $gs-success-color;
   border-color: $gs-success-color;
@@ -319,7 +445,6 @@ code {
   background-color: $gs-warning-color;
   border-color: $gs-warning-color;
   color: $gs-white-color;
-
   &:hover,
   &:focus {
     background-color: darken($gs-warning-color, 10%);
@@ -381,7 +506,6 @@ code {
   background-color: $gs-white-color;
   border-color: $gs-warning-color;
   color: $gs-warning-color;
-
   &:hover,
   &:focus {
     background-color: $gs-warning-color;
@@ -406,7 +530,6 @@ code {
   border-color: $gs-primary-color;
   color: $gs-primary-color;
   text-decoration: underline;
-
   &:hover,
   &:focus {
     border-color: $gs-primary-dark-color;
