@@ -304,14 +304,27 @@ code {
   }
 }
 .btn-success {
-  background-color: $gs-black-color;
+  background-color: $gs-success-color;
   border-color: $gs-success-color;
-  color: $gs-success-color;
+  color: $gs-white-color;
   &:hover,
   &:focus {
-    background-color: $gs-black-color;
-    border-color: $gs-primary-light-color;
-    color: $gs-primary-light-color;
+    background-color: darken($gs-success-color, 10%);
+    border-color: darken($gs-success-color, 10%);
+    color: $gs-white-color;
+  }
+}
+
+.btn-warning {
+  background-color: $gs-warning-color;
+  border-color: $gs-warning-color;
+  color: $gs-white-color;
+
+  &:hover,
+  &:focus {
+    background-color: darken($gs-warning-color, 10%);
+    border-color: darken($gs-warning-color, 10%);
+    color: $gs-white-color;
   }
 }
 
@@ -353,14 +366,27 @@ code {
 }
 
 .btn-outline-success {
-  background-color: $gs-white-base-color;
-  border-color: $gs-black-color;
+  background-color: $gs-white-color;
+  border-color: $gs-success-color;
   color: $gs-success-color;
   &:hover,
   &:focus {
-    background-color: $gs-black-color;
-    border-color: $gs-black-color;
-    color: $gs-primary-light-color;
+    background-color: $gs-success-color;
+    border-color: $gs-success-color;
+    color: $gs-white-base-color;
+  }
+}
+
+.btn-outline-warning {
+  background-color: $gs-white-color;
+  border-color: $gs-warning-color;
+  color: $gs-warning-color;
+
+  &:hover,
+  &:focus {
+    background-color: $gs-warning-color;
+    border-color: $gs-warning-color;
+    color: $gs-white-base-color;
   }
 }
 
@@ -434,7 +460,7 @@ ul.pagination li.active a {
 .quarto-title-banner {
   margin-bottom: 1em;
   color: $gs-secondary-alt-color;
-  background: $gs-primary-light-color--lighter;
+  background: $gs-primary-dark-color--lightest;
 
   h1 {
     color: $gs-secondary-alt-color;
@@ -568,19 +594,31 @@ input[type=checkbox] {
 
 .callout-warning {
   border-color: $callout-color-warning;
-  color: $gs-secondary-alt-color;
+  color: $callout-color-warning;
 
   &.callout-titled {
-    .callout-icon {
-      &::before {
-        // Not sure why this isn't working with the SVG
-        // background-image: $gs-grass-icon-svg !important;
-        fill: $gs-secondary-alt-color !important;
-        background-image: $gs-grass-logo-white-simple !important;
-        @include apply-color-filter($gs-secondary-alt-color, true);
-      }
+    .callout-body {
+      color: $gs-black-color;
     }
+  }
+}
 
+.callout-important {
+  border-color: $callout-color-important;
+  color: $callout-color-important;
+
+  &.callout-titled {
+    .callout-body {
+      color: $gs-black-color;
+    }
+  }
+}
+
+.callout-caution {
+  border-color: $callout-color-caution;
+  color: $callout-color-caution;
+
+  &.callout-titled {
     .callout-body {
       color: $gs-black-color;
     }
@@ -594,11 +632,11 @@ input[type=checkbox] {
 
 // Front Matter
 .quarto-title .quarto-categories {
-  color: $gs-primary-color;
+  color: $gs-primary-dark-color;
 }
 
 .quarto-title-meta-heading {
-  color: $gs-primary-color;
+  color: $gs-primary-dark-color;
   font-family: $gs-grass-font--medium;
   font-weight: 700;
 }

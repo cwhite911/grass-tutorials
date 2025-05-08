@@ -509,7 +509,7 @@ See @tbl-panel for details, especially @tbl-second.
 Note that there are five types of callouts, including: 
 `note`, `tip`, `warning`, `caution`, and `important`.
 
-### Note {.text-primary}
+### Note
 
 ::: {.callout-note}
 This is a note callout.
@@ -521,7 +521,7 @@ This is a note callout.
 :::
 ```
 
-### Tip {.text-secondary}
+### Tip
 
 ::: {.callout-tip}
 This is a tip callout.
@@ -533,7 +533,7 @@ This is a tip callout.
 :::
 ```
 
-### Warning {.text-warning}
+### Warning
 
 ::: {.callout-warning}
 This is a warning callout.
@@ -558,6 +558,18 @@ This is a imporant callout.
 ```
 
 ### Caution
+
+::: {.callout-caution}
+This is a caution callout.
+:::
+
+```md
+::: {.callout-caution}
+This is a caution callout.
+:::
+```
+
+### Collapsable Callout
 
 ::: {.callout-caution collapse="true"}
 ## Expand To Learn About Collapse
