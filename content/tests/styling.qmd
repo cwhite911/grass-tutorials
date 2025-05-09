@@ -58,21 +58,42 @@ This document demonstrates various components available in Quarto.
 
 ## Headings
 
+Heading 1 is bolded and used as the title of the page.
+
 # Heading 1
+
+```md
+# Heading 1
+```
+
+Heading 2 is thined and used to introduce a new section or topic within a page.
+
 ## Heading 2
+```md
+## Heading 2
+```
+
+Heading 3 is bolded and used to introduce a new subsection or subtopic within a page.
+
 ### Heading 3
+
+```md
+### Heading 3
+```
+
+Headings 4, 5 and 6 are inceasing smaller and can be used as need after heading 3.
+
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
 
 ```md
-# Heading 1
-## Heading 2
-### Heading 3
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
 ```
+
+> All heading are enforced as **sentence case**. 
 
 ## Text Formatting
 
