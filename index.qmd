@@ -1,6 +1,10 @@
 ---
 title: "Learn GRASS"
 listing:
+    - id: tests
+      contents:
+        - content/tests/styling.qmd
+      type: grid   
     - id: get-started
       contents: content/tutorials/get_started
       type: grid
@@ -10,7 +14,6 @@ listing:
       contents: 
         - content/tutorials    
         - content/tutorials/external/ecodiv.yml
-        - content/tests/*.qmd
       sort: "date desc"
       type: grid
       categories: true
@@ -30,4 +33,10 @@ title-block-banner: false
 
 ## All Tutorials
 :::{#all}
+:::
+
+::: {.content-visible when-profile="local"}
+## Tests
+:::{#tests}
+:::
 :::

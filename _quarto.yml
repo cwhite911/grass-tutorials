@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  render: 
+    - "*.qmd"
 website:
   site-url: "https://grass-tutorials.osgeo.org"
   favicon: images/favicon.ico
@@ -64,3 +66,5 @@ format:
     link-external-newwindow: true
 
 brand: _brand.yml
+profile:
+  default: local
