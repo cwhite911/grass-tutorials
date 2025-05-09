@@ -823,33 +823,61 @@ This content can be styled with a border
 :::
 ```
 
-### Sidebar
-
-::::: {#special .sidebar}
-
-::: {.warning}
-Here is a warning.
-:::
-
-More content.
-:::::
-
-```md
-::::: {#special .sidebar}
-
-::: {.warning}
-Here is a warning.
-:::
-
-More content.
-:::::
-```
-
 ### Spans
 
 [This is *some text*]{.class key="val"}
 
+```md
+[This is *some text*]{.class key="val"}
+```
+
 <span class="custom-span">This is a custom span.</span>
+
+```md
+<span class="custom-span">This is a custom span.</span>
+```
+
+### Span Styling
+
+#### Small Caps
+
+[smallcaps]{.smallcaps}
+
+```md
+[smallcaps]{.smallcaps}
+```
+
+#### Underline
+
+[underlined]{.underline}
+
+```md
+[underlined]{.underline}
+```
+
+#### Highlight
+
+[highlighted]{.mark}
+
+```
+[highlighted]{.mark}
+```
+
+### Order of Attribute
+
+The order of attribute for divs and spans follow rules defined in the [pandoc](https://pandoc.org/MANUAL.html#divs-and-spans) documentation.
+
+#### Good
+
+```md
+[Good]{#id .class key="val"}
+```
+
+#### Bad
+
+```md
+[This is *some text*]{.class key="val"}
+```
 
 ## Listing
 
