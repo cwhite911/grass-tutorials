@@ -25,6 +25,7 @@ format:
     code-copy: true
     code-fold: true
     code-summary: "Show the code"
+    code-overflow: wrap
 profile: local
 toc: true
 toc-depth: 3
@@ -736,7 +737,46 @@ session <- initGRASS(gisBase = "/usr/lib/grass84", # where grass binaries live, 
 
 ```
 
-### Raw Content
+## Tabsets
+
+::: {.panel-tabset}
+## R
+
+``` {.r}
+execGRASS(
+  "r.slope.aspect",
+  parameters = list(
+    elevation = "elevation",
+    slope = "slope",
+    aspect="aspect"
+  )
+)
+```
+
+## Python
+
+``` {.python}
+gs.run_command(
+  "r.slope.aspect",
+  elevation = "elevation",
+  slope = "slope",
+  aspect="aspect"
+)
+```
+
+:::
+
+```md
+::: {.panel-tabset}
+
+Your panel content here
+
+:::
+```
+
+For more information about tabsets refer to the Quarto Docs [here](https://quarto.org/docs/output-formats/html-basics.html#tabsets)
+
+## Raw Content
 
 ```{=html}
 <iframe src="https://grass.osgeo.org/" width="500" height="400"></iframe>

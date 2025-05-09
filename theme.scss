@@ -114,18 +114,20 @@ $gs-dark-color: $gs-grey-dark-color;
 
 /* Images */
 $gs-images-base-path: 'images';
+$gs-images-logos-small-path: $gs-images-base-path + '/logos/small';
 $gs-svg-logos-base-path: $gs-images-base-path + '/logos/large';
 $gs-icons-base-path: $gs-images-base-path + '/icons';
 
 
 /* Icons */
-$gs-grass-logo-white-simple: url('images/logos/small/grass-logo-green-simple@05x.png');
+$gs-grass-logo-white-simple: url($gs-images-logos-small-path + '/grass-logo-green-simple@05x.png');
 $gs-grass-logo-simple-svg: url($gs-svg-logos-base-path + '/grass-green-no-text.svg');
 $gs-grass-icon: url($gs-icons-base-path + '/grass-icon.svg');
 
 // Description: This file defines Bootstrap theme variables by mapping them 
 //              to custom color variables. These variables are used to 
 //              customize the appearance of the Bootstrap framework.
+// Bootstrap Variables: https: //github.com/twbs/bootstrap/blob/main/scss/_variables.scss
 // Variables:
 // - $primary: Primary theme color, mapped to $gs-primary-color.
 // - $secondary: Secondary theme color, mapped to $gs-secondary-color.
@@ -145,6 +147,9 @@ $warning: $gs-warning-color;
 $danger: $gs-danger-color;
 $light: $gs-grey-light-color;
 $dark: $gs-grey-dark-color;
+
+// Control the color of the active tab in a tabset
+$nav-tabs-link-active-color: $gs-secondary-alt-color;
 
 // ---------------------------------------------------------------------------
 // Quarto Variables
@@ -351,6 +356,8 @@ h4, h5, h6 {
 }
 
 /* Code Styles
+If we want more control the next step would be to create a custom theme
+for the syntax highlighter using skylighting https: //github.com/jgm/skylighting
 -----------------------------------------------------------------------------*/
 code {
   span {
@@ -370,15 +377,15 @@ code {
     }
     // Color of titles in markdown code blocks
     .fu {
-      color: $code-string-color;
+      color: $gs-secondary-alt-color;
     }
     // Color of pipes in markdown code blocks
     .pp {
       color: $code-keyword-color;
     }
-    // Color of blockquotes in markdown code blocks
+    // Color of blockquotes in markdown code blocks and parameter names in R code blocks
     .at {
-      color: $gs-secondary-dark-color;
+      color: $gs-secondary-color;
     }
   }
 }
