@@ -353,13 +353,27 @@ code {
       color: $gs-primary-color;
       font-style: inherit;
     }
+    // Color of keywords in code blocks
     .im {
       color: $code-keyword-color;
       font-style: inherit;
     }
+    // Color of strings in code blocks
     .st {
       color: $code-string-color;
       font-style: inherit;
+    }
+    // Color of titles in markdown code blocks
+    .fu {
+      color: $code-string-color;
+    }
+    // Color of pipes in markdown code blocks
+    .pp {
+      color: $code-keyword-color;
+    }
+    // Color of blockquotes in markdown code blocks
+    .at {
+      color: $gs-secondary-dark-color;
     }
   }
 }
