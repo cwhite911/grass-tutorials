@@ -151,6 +151,8 @@ $dark: $gs-grey-dark-color;
 // Control the color of the active tab in a tabset
 $nav-tabs-link-active-color: $gs-secondary-alt-color;
 
+$card-title-color: $gs-secondary-alt-color;
+
 // ---------------------------------------------------------------------------
 // Quarto Variables
 // ---------------------------------------------------------------------------
@@ -316,6 +318,11 @@ $important: false) {
   &::first-letter {
     text-transform: uppercase;
   }
+  // Insterted by Lua filter protect-terms
+  .no-transform,
+  span.no-transform {
+    text-transform: none !important;
+  }
 }
 
 /*-- scss:rules --*/
@@ -329,7 +336,7 @@ h1 {
   font-size: 2.25em;
   line-height: 1.3;
   margin: 0 0 1em;
-  @include sentence-case;
+  // @include sentence-case;
 }
 
 h2 {
@@ -338,7 +345,7 @@ h2 {
   font-size: 2em;
   line-height: 1.4;
   margin: .64em 0 .64em;
-  @include sentence-case;
+  // @include sentence-case;
 }
 
 h3 {
@@ -348,12 +355,12 @@ h3 {
   letter-spacing: -.01em;
   line-height: 1.5;
   margin: 1.6em 0 .8em;
-  @include sentence-case;
+  // @include sentence-case;
 }
 
-h4, h5, h6 {
-  @include sentence-case;
-}
+// h4, h5, h6 {
+  // @include sentence-case;
+// }
 
 /* Code Styles
 If we want more control the next step would be to create a custom theme
@@ -604,7 +611,6 @@ ul.pagination li.active a {
   color: $gs-secondary-alt-color;
 }
 
-
 /* Table of Contents
 -----------------------------------------------------------------------------*/
 .sidebar nav[role=doc-toc]>h2 {
@@ -653,6 +659,7 @@ ul.pagination li.active a {
 .card {
   .card-body {
     background-color: $gs-white-base-color;
+    color: $gs-black-color;
   }
 }
 
