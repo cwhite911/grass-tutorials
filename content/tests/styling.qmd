@@ -1,6 +1,6 @@
 ---
 title: GRASS Quarto Design Guide
-description: Adopted from Quarto Documentatoin
+description: Adopted from Quarto Documentation
 image: images/LinkedIn-Post-Image.png
 title-block-banner: true
 author:
@@ -138,14 +138,14 @@ superscript^2^ / subscript~2~
     Continued (indent 4 spaces)
 ```
 
-(@)  A list whose numbering
+(@)  A list which numbering
 
 continues after
 
 (@)  an interruption
 
 ```md
-(@)  A list whose numbering
+(@)  A list which numbering
 
 continues after
 
@@ -200,7 +200,7 @@ belong to the previous footnote.
         { some.code }
 
     The whole paragraph can be indented, or just the first
-    line.  In this way, multi-paragraph footnotes work like
+    line. In this way, multi-paragraph footnotes work like
     multi-paragraph list items.
 
 This paragraph won't be part of the note, because it
@@ -223,7 +223,7 @@ belong to the previous footnote.
         { some.code }
 
     The whole paragraph can be indented, or just the first
-    line.  In this way, multi-paragraph footnotes work like
+    line. In this way, multi-paragraph footnotes work like
     multi-paragraph list items.
 
 This paragraph won't be part of the note, because it
@@ -548,12 +548,12 @@ This is a warning callout.
 ### Important
 
 ::: {.callout-important}
-This is a imporant callout.
+This is an important callout.
 :::
 
 ```md
 ::: {.callout-important}
-This is a imporant callout.
+This is an important callout.
 :::
 ```
 
@@ -649,7 +649,7 @@ $$
 
 ### Special Buttons
 
-We have a custom support buttons ([More Info](#includes)) that link to GRASS's [Open Collective page]({{< var grass.support >}})
+We have custom support buttons ([More Info](#includes)) that link to GRASS's [Open Collective page]({{< var grass.support >}})
 
 {{< include /content/include/_support-button.qmd >}}
 {{< include /content/include/_support-outline-button.qmd >}}
@@ -790,7 +790,7 @@ page 2
 
 ## Divs & Spans
 
-### Boarder
+### Border
 
 ::: {.border}
 This content can be styled with a border
@@ -860,7 +860,7 @@ More content.
 
 ### Column Margin
 ::: {.column-margin}
-![A image in the margin](images/LinkedIn-Post-Image.png)
+![An image in the margin](images/LinkedIn-Post-Image.png)
 :::
 
 ## Lipsum
@@ -897,7 +897,7 @@ Will render {{< var grass.version >}}
 
 ## Includes
 
-The include [shortcode](https://quarto.org/docs/authoring/includes.html) allow us to use reusable markdown. 
+The include [shortcode](https://quarto.org/docs/authoring/includes.html) allows us to use reusable markdown. 
 
 ### Support Button
 
