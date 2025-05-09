@@ -1,6 +1,6 @@
 ---
 title: Team Documents
-description: Learn about sytling your GRASS tutorial
+description: Learn about styling your GRASS tutorial
 author: GRASS Developer Team
 categories: ["grass", "design", "test"]
 data: today
