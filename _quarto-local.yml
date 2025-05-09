@@ -2,4 +2,4 @@ project:
   type: website
   title: "(Local) Learn GRASS"
   render: 
-    - "tests/*.qmd"
+    - "content/tests/*.qmd"
