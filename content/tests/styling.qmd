@@ -879,6 +879,19 @@ The order of attribute for divs and spans follow rules defined in the [pandoc](h
 [This is *some text*]{.class key="val"}
 ```
 
+## Keyboard Shortcuts
+
+The [kbd]{.text-success} shortcode can be used to describe keyboard shortcuts in documentation.
+
+```md {.markdown shortcodes="false"}
+To print, press {{< kbd Shift-Ctrl-P >}}. 
+To open an existing new project, 
+press {{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}.
+```
+
+To print, press {{< kbd Shift-Ctrl-P >}}. 
+To open an existing new project, press {{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}.
+
 ## Listing
 
 ### Table
