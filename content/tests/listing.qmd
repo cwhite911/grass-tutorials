@@ -1,6 +1,6 @@
 ---
 title: Test Listing
-description: Learn about styling your GRASS tutorial
+description: This listing is used to visualize listing styles in styling.qmd
 author: GRASS Developer Team
 categories: ["grass", "design", "test"]
 data: today
