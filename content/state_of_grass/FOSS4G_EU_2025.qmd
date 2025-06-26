@@ -1,0 +1,166 @@
+---
+title: "The State of GRASS"
+subtitle: "Community, Code, and the Road Ahead"
+author: "GRASS GIS Project Team"
+format: 
+  revealjs:
+    theme: [simple, ../../theme.scss]
+    slide-number: true
+    transition: fade
+    chalkboard: true
+    toc: true
+    toc-depth: 2
+    logo: images/grass-logo.png
+    footer: "FOSS4G | June 2025"
+---
+
+## Welcome!
+
+Join us for a lively overview of the current state of the GRASS project — where community meets cutting-edge geospatial technology.
+
+Longtime power user?  
+Curious newcomer?
+
+**This talk is for you!**
+
+---
+
+## What We'll Cover
+
+- Governance and leadership
+- Community growth & outreach
+- Branding and identity
+- Technical highlights (v8.5)
+- Build system modernization
+- The GRASS roadmap
+- How *you* can get involved
+
+---
+
+## Strengthening Governance
+
+**Revitalized structure:**
+- New contributors welcomed into leadership roles
+- Focus on sustainable governance
+
+**NumFOCUS fiscal sponsorship**
+- Provides financial oversight
+- Enables long-term sustainability
+
+---
+
+## Community Growth
+
+### Powered by Support
+
+🏛 NSF-backed mentoring program  
+🎓 Student Grant program  
+👥 GRASS Developer Summit 2025 — Raleigh, NC
+
+> “Mentorship fuels innovation.”
+
+---
+
+## Summer of Code Highlights
+
+🚀 Google Summer of Code 2025
+
+🌱 Mentoring a new generation of contributors  
+🛠️ Real, production-ready code contributions  
+🔁 Continuously integrating fresh ideas
+
+---
+
+## GRASS Gets a Makeover
+
+🎨 **New logo & branding**  
+🧢 Swag shop launched: apparel, stickers, more
+
+✂️ “GRASS GIS” ➡️ Just **GRASS**
+
+🧭 Modern image, same iconic values
+
+---
+
+## New Learning Resources
+
+📚 **Tutorial website** launched  
+🧭 Modernized documentation platform  
+📺 Outreach efforts across multiple platforms
+
+---
+
+## GRASS 8.5: Dev Highlights
+
+🧪 New features  
+⚙️ Performance improvements  
+🔗 Better integration across platforms
+
+---
+
+## Under the Hood
+
+✅ Code quality improvements  
+🛡️ Security fixes via automated scanners  
+🔄 Stricter CI for long-term stability
+
+---
+
+## Build System Overhaul
+
+🛠️ **CMake migration** underway  
+📦 Official **Conda package** coming soon
+
+✅ Easier installation for Python/R users  
+✅ Lower entry barrier for new devs
+
+---
+
+## The Road Ahead
+
+📅 **Annual releases** – next up: GRASS 8.6 (2026)  
+🔗 Tighter bridges to **QGIS**, **R**, and more  
+🐍 Refined APIs for Python and R scripting  
+📥 One-click installs via Conda
+
+---
+
+## Sustainability First
+
+💸 Seeking new grants and sponsors  
+🤝 Growing our donor base  
+🔧 Spreading infrastructure knowledge  
+🧘 Reducing burnout via maintainability
+
+---
+
+## In Summary
+
+🌱 **Community growth**  
+🛠️ **Technical innovation**  
+🎯 **Clear roadmap ahead**  
+🌍 **Broadening impact**
+
+**The state of GRASS is strong and dynamic.**
+
+---
+
+## Get Involved!
+
+💬 Join the community  
+📚 Contribute to docs or code  
+📢 Spread the word  
+💰 Donate or sponsor
+
+**You are the future of GRASS.**
+
+---
+
+## Thank You!
+
+Let’s keep building together.
+
+[grass.osgeo.org](https://grass.osgeo.org)  
+[Join the mailing list](https://grass.osgeo.org/community/mailing-lists/)  
+[Support us via NumFOCUS](https://numfocus.org/project/grass)
+
